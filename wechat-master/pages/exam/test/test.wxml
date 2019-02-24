@@ -1,0 +1,57 @@
+<view class='test-container'>
+
+  <view class='header'>
+    <view class='timer-wrapper'>
+      <view class='time'>{{hour}} : {{minute}} : {{second}}</view>
+      <view class='pause' bindtap='toggleCounter'>{{start ? '| |' : '▷'}}</view>
+    </view>
+    <!-- <view class='text'>{{title}} 单元测试/期中测试/期末测试</view> -->
+  </view>
+  <view class='question-wrapper'>
+    <view class='text'>{{currentEx.questionName}}</view>
+    <view class='question'>{{currentEx.questionContent}}</view>
+    <view class="weui-cells weui-cells_after-title">
+      <radio-group bindchange="radioChange">
+          <label class="weui-cell weui-check__label">
+              <radio class="weui-check" value="A" checked="{{currentEx.chooseA}}"/>
+              <view class="weui-cell__bd">A  {{currentEx.answerA}}</view>
+              <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{currentEx.chooseA}}">
+                  <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+              </view>
+          </label>
+          <label class="weui-cell weui-check__label">
+              <radio class="weui-check" value="B" checked="{{currentEx.chooseB}}"/>
+              <view class="weui-cell__bd">B  {{currentEx.answerB}}</view>
+              <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{currentEx.chooseB}}">
+                  <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+              </view>
+          </label>
+          <label wx:if="{{currentEx.answerC}}" class="weui-cell weui-check__label">
+              <radio class="weui-check" value="C" checked="{{currentEx.chooseC}}"/>
+              <view class="weui-cell__bd">C  {{currentEx.answerC}}</view>
+              <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{currentEx.chooseC}}">
+                  <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+              </view>
+          </label>
+          <label wx:if="{{currentEx.answerD}}" class="weui-cell weui-check__label">
+              <radio class="weui-check" value="D" checked="{{currentEx.chooseD}}"/>
+              <view class="weui-cell__bd">D  {{currentEx.answerD}}</view>
+              <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{currentEx.chooseD}}">
+                  <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+              </view>
+          </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class='image-wrapper'></view>
+
+  <view class='footer'>
+    <view class="left-area {{num <= 0 ? 'gray': ''}}" bindtap='toPrevExam'>
+      ◀ 上一题
+    </view>
+    <view class='zero-area'>交卷</view>
+    <view class="right-area {{num >= exercises.length - 1 ? 'gray': ''}}" bindtap='toNextExam'>
+      下一题 ▶
+    </view>
+  </view>
+</view>

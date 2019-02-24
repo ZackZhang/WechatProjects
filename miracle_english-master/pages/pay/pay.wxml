@@ -1,0 +1,45 @@
+<!--pages/pay/pay.wxml-->
+<view class="page">
+  <view class="pay-ban">
+    <image src="../../images/pay-ban.jpg"></image>
+  </view>
+  
+  <view class="pt-60 pd-80">
+    <view class="tac fs-12">奇迹英语每日奇迹课——给您一个高效的母语环境</view>
+
+    <view class="pay-list mt-30">
+      <navigator class="pay-item flex" url="" hover-class="none" wx:for="{{ payList }}">
+        <view class="item-bd flex1 tac">
+          <text>{{ item.tle }}</text>
+          <text>({{ item.date }})</text>
+        </view>
+        <view class="item-side ml-30">￥{{ item.price }}</view>
+        <view class="item-gou">√</view>
+      </navigator>
+    </view>
+
+    <view class="fs-12 tac mt-40">奇迹未来“CQ竞争力”课程——面向未来的精英教育</view>
+    
+    <view class="pay-list pay-list--style-2 mt-30">
+      <navigator class="pay-item flex" url="" hover-class="none" wx:for="{{ payList2 }}">
+        <view class="item-bd flex1 tac">
+          <text>{{ item.tle }}</text>
+          <text>({{ item.date }})</text>
+        </view>
+        <view class="item-side ml-30">￥{{ item.price }}</view>
+        <view class="item-gou">√</view>
+      </navigator>
+    </view>
+
+    <view class="pay-tips flex-h-c color-primary mt-60">
+      <view>
+        <view class="tips-rect dib mr-20 vat mt-10"></view>
+        <view class="flex1 fs-12 dib vat">
+          <view>奇迹英语，与您探讨——英语怎么学才高效！</view>
+          <view>学完课程，孩子期末成绩没有提高10分以上，</view>
+          <view>终身免费学！</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+
+<view class='banner page__bg_white'>
+    <view class='line'></view>
+    <label>每日拼读</label>
+</view>
+
+<block wx:for="{{pkList}}">
+    <view class='node'>
+        <view class='content'>
+            <xx-blackboard 
+                title="{{item.theme.title}}" 
+                content="{{item.theme.content}}"
+                url="{{item.theme.voice_url}}"
+            ></xx-blackboard>
+            <view class='pk'>
+                <xx-voice 
+                    title="学员"
+                    list="{{item.student_list}}"
+                    select="{{selectID}}" 
+                    catch:click="playVoice"
+                ></xx-voice>
+                <!-- <view class='rule'></view> -->
+                <xx-voice 
+                    title="试听"
+                    list="{{item.visitor_list}}" 
+                    select="{{selectID}}" 
+                    direction="row-reverse"
+                    catch:click="playVoice"
+                ></xx-voice>
+            </view>
+            <view style='height:15px;'></view>
+            <view class='line__gray'></view>
+            <navigator url="/pages/speak/speak?theme_id={{item.theme.id}}" class='join' catchtap='join'>参加</navigator>
+        </view>
+    </view>
+</block>
+
+<xx-loading more="{{false}}"></xx-loading>

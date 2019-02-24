@@ -1,0 +1,28 @@
+
+ 
+<view class='bg'>
+    <view class='circle '>
+        <view class='circle sub' catchtap='getTempFile' hidden='{{!tempFilePath}}'>
+            <view class='node' hover-class="click">
+                <image src='../../images/menu_upload.png'></image>
+            </view>           
+        </view>
+
+        <view 
+            class='circle center' 
+            bindtouchstart='touchStart'
+            bindtouchmove='touchMove'
+            bindtouchend='touchEnd'
+        >
+                <view class='node level_color_1'  hover-class="click" wx:if="{{currentLevel == STRANGER}}">录音</view>
+                <view class='node level_color_2'  hover-class="click" wx:elif="{{currentLevel == UNSURE}}">巩</view>
+                <view class='node level_color_3'  hover-class="click" wx:else>牢</view>
+        </view>
+
+        <view class='circle sub' catchtap='audition' hidden='{{!tempFilePath}}'> 
+            <view class='node' hover-class="click">
+                <image src='../../images/menu_play.png'></image>
+            </view>    
+        </view>
+    </view>
+</view> 

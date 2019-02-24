@@ -1,0 +1,132 @@
+<!--pages/catalog/catalog.wxml-->
+<view class="page">
+  <view class="qjyy-ban">
+    <image src="../../images/qjyy-ban.jpg"></image>
+  </view>
+
+  <view class="pd-40 pb-50">
+    <view class="catalog-container br-10 pt-30 plr-20 pb-40 bg-white">
+      <view class="catalog-scroll">
+        <view class="fs-18 pl-15 fw-700 color-primary">TODAY</view>
+
+        <view class="catalog-list mt-20">
+          <view class="catalog-item flex-v-c pd-20" wx:for="{{ catalogList }}" wx:key="index">
+            <view class="item-bd flex1 ovh color-white">
+              <view class="bd-tle toe-line-2 fw-700 lh-sm">{{ item.tle }}</view>
+              <view class="fs-12 toe">{{ item.txt }}</view>
+            </view>
+
+            <view class="item-img ml-40">
+              <image src="{{ item.imgUrl }}"></image>
+            </view>
+          </view>
+        </view>
+
+        <view class="fs-18 pl-15 fw-700 color-primary mt-30">YESTERDAY</view>
+
+        <view class="catalog-list mt-20">
+          <view class="catalog-item flex-v-c pd-20" wx:for="{{ catalogList }}" wx:key="index">
+            <view class="item-bd flex1 ovh color-white">
+              <view class="bd-tle toe-line-2 fw-700 lh-sm">{{ item.tle }}</view>
+              <view class="fs-12 toe">{{ item.txt }}</view>
+            </view>
+
+            <view class="item-img ml-40">
+              <image src="{{ item.imgUrl }}"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="tac mt-25 color-primary">
+        下滑 全目录
+        <image class="icon icon-arrow-double-down ml-10" src="../../images/icon-arrow-double-down.png"></image>
+      </view>
+
+      <view class="mt-30 flex-s-b plr-20">
+        <view>
+          <view class="color-primary">日期往期搜索</view>
+          <!-- <input class="search-input mt-10"></input> -->
+          <picker class="mt-10" mode="date" value="{{date}}" start="2015-09-01" end="2019-12-01" bindchange="bindDateChange">
+            <view class="search-input" style="height: 50rpx; line-height: 48rpx;">
+              {{date}}
+            </view>
+          </picker>
+        </view>
+
+        <view class="tar">
+          <view class="color-primary">关键词往期搜索</view>
+          <input class="search-input mt-10 tal"></input>
+        </view>
+      </view>
+    </view>
+
+    <view class="mt-40">
+      <view class="fs-18 fw-700 tac color-white">
+        奇迹英语 CQ竞争力双语国际课程
+      </view>
+      <view class="color-white tac">让每一个孩子都享有棒棒的国际教育</view>
+
+      <view class="menu-list row mt-20">
+        <view class="menu-item col-xs-6">
+          <view class="item-inner tac">
+            <view class="item-icon">
+              <image class="icon icon-kxj" src="../../images/icon-1.png"></image>
+            </view>
+            <view class="color-white">小小科学家</view>
+          </view>
+        </view>
+
+        <view class="menu-item col-xs-6">
+          <view class="item-inner tac">
+            <view class="item-icon">
+              <image class="icon icon-sxy" src="../../images/icon-2.png"></image>
+            </view>
+            <view class="color-white">少年商学院</view>
+          </view>
+        </view>
+
+        <view class="menu-item col-xs-6">
+          <view class="item-inner tac">
+            <view class="item-icon">
+              <image class="icon icon-xxlxy" src="../../images/icon-3.png"></image>
+            </view>
+            <view class="color-white">少年想象力学院</view>
+          </view>
+        </view>
+
+        <view class="menu-item col-xs-6">
+          <view class="item-inner tac">
+            <view class="item-icon">
+              <image class="icon icon-swlxy" src="../../images/icon-4.png"></image>
+            </view>
+            <view class="color-white">少年思维力学院</view>
+          </view>
+        </view>
+
+        <view class="menu-item col-xs-6">
+          <view class="item-inner tac">
+            <view class="item-icon">
+              <image class="icon icon-qsysk" src="../../images/icon-5.png"></image>
+            </view>
+            <view class="color-white">EQ情商影视课</view>
+          </view>
+        </view>
+
+        <view class="menu-item col-xs-6">
+          <view class="item-inner tac">
+            <view class="item-icon">
+              <image class="icon icon-hbdbz" src="../../images/icon-6.png"></image>
+            </view>
+            <view class="color-white">奇迹绘本大爆炸</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="flex-s-b plr-80 mt-30">
+        <navigator class="custom-btn fw-700 tac color-white" url="">打卡英雄排行榜</navigator>
+        <navigator class="custom-btn fw-700 tac color-white" url="">往期最热话题</navigator>
+      </view>
+    </view>
+  </view>
+</view>

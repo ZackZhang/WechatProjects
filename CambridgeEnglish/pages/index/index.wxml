@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="header">
+  <image class="logo" src=""></image>
+</view>
+<view class="navigation">
+  <text class="nav-item" data-title="主页" bindtap="loadIndex">主页</text>
+  <text class="nav-item" data-title="工具" bindtap="loadIndex">教育机构</text>
+  <text class="nav-item" data-title="分享" bindtap="loadIndex">学习者</text>
+  <text class="nav-item" data-title="随笔" bindtap="loadIndex">教师</text>
+  <text class="nav-item" data-title="展示" bindtap="loadIndex">认可机构</text>
+</view>
+<view class="title"><view class="border-l"></view>{{title}}</view>
+
+<!-- footer html -->
+<view class="footer">
+  <text class="font24">Copyright ©  2018-2019 Cambridge English. All Rights Reserved.</text>
+</view>

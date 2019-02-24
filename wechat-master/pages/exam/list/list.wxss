@@ -1,0 +1,27 @@
+.exam-container {
+  padding: 0;
+}
+
+.exam-container .exam-wrapper {
+  display: inline-block;
+  padding: 10rpx;
+  width: 33.33%;
+  color: #fff;
+}
+
+.exam-container .exam-wrapper .exam {
+  padding: 20rpx 10rpx;
+  background: #5ebe1c;
+  text-align: center;
+  font-size: 28rpx;
+  border-radius: 8rpx;
+}
+
+.weui-grid__icon {
+  width: 128px;
+  height: 128px;
+}
+
+.weui-grids .custom-style {
+  width: 50%;
+}

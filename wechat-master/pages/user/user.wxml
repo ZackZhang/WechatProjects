@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 用户信息模块 -->
+  <view class="userinfo">
+    <view class="left">
+      <!-- 头像 -->
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatar ?  userInfo.avatar: 'https://www.yanda123.com/app/people.png'}}" background-size="cover"></image>
+      <view class='info-wrapper' wx:if="{{hasUserInfo}}">
+        <!-- 用户名 -->
+        <view class="text username">用户名: {{userInfo.nickName}}</view>
+        <view wx:if="{{isVip}}" class='text'>
+          <view class='vip'>VIP</view>
+          <view wx:if='{{!isForever}}' class='expire'>剩{{expireDay}}天到期</view>
+          <view wx:if='{{isForever}}' class='expire'>永久会员</view>
+        </view>
+        <view wx:if="{{!isVip}}" class='text'>
+          <view class='open-vip'>开通VIP</view>
+        </view>
+      </view>
+    </view>
+    <!-- 登录按钮 -->
+    <view class='login-wrapper' wx:if="{{!hasUserInfo}}">
+      <button class="login" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
+      <button class="login" bindtap="vipLogin"> 共享登录 </button>
+    </view>
+
+    <!-- 账号管理 -->
+    <view class="right" wx:if="{{hasUserInfo}}">
+      <view bindtap='toAccountSetting'>
+        <image src="https://www.yanda123.com/app/setup_fill.png" class="setting-icon" />
+        <text>账号管理</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 工作台模块 -->
+  <view class="page__bd">
+    <view class="weui-grids">
+      <block wx:for="{{workCards}}" wx:key="{{item}}">
+        <view data-url="{{item.url}}" class="weui-grid" hover-class="weui-grid_active" bindtap='handleWorkClick'>
+          <image class="weui-grid__icon" src="{{ item.icon }}" />
+          <view class="weui-grid__label">{{ item.label }}</view>
+        </view>
+      </block>
+      <!-- 在线客服 -->
+      <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+        <button class="open-contact" open-type="contact" session-from="weapp"></button>
+          <image class="weui-grid__icon" src="https://www.yanda123.com/app/customerservice.png" />
+          <view class="weui-grid__label">在线客服</view>
+      </navigator>
+    </view>
+  </view>
+
+  <!-- 底部信息模块 -->
+  <view class="weui-footer">
+      <view class="weui-footer__text">Copyright © 2017-2018 燕达教育</view>
+  </view>
+</view>

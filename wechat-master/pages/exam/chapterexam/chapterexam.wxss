@@ -1,0 +1,175 @@
+.header {
+  position: relative;
+  padding: 20rpx 0;
+  height: 100rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-bottom: 2rpx solid #ccc;
+}
+
+.exam-answer-wrapper {
+  position: absolute;
+  top: 100rpx;
+  bottom: 100rpx;
+  width: 100%;
+}
+
+
+.header .counter {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+}
+
+.curCount {
+  font-size: 64rpx;
+  display: inline-block;
+  color: #2c3c4b;
+}
+
+.totalCount {
+  display: inline-block;
+  color: #7d8a93;
+}
+
+
+.scroll-0 {
+  left: -100%;
+}
+
+.scroll-0.next {
+  transition: all 0.2s linear;
+  left: -200%;
+}
+
+.scroll-0.prev {
+  transition: all 0.2s linear;
+  left: 0; 
+}
+
+.scroll-1 {
+  left: 0;
+}
+
+.scroll-1.next {
+  transition: all 0.2s linear;
+  left: -100%;
+}
+
+.scroll-1.prev {
+  transition: all 0.2s linear;
+  left: 100%;
+}
+
+.scroll-2 {
+  left: 100%;
+}
+
+.scroll-2.next {
+  transition: all 0.2s linear;
+  left: 0;
+}
+
+.scroll-2.prev {
+  transition: all 0.2s linear;
+  left: 200%;
+}
+
+
+.exam-des .type, .exam-des .text {
+  padding: 20rpx 20rpx 0 20rpx;
+}
+
+.choice:nth-child(odd) {
+  display: flex;
+  background: #f5f5f5;
+}
+
+.choice:nth-child(even) {
+  display: flex;
+  background: #fff;
+}
+
+.choice .text-wrapper {
+  flex: 1;
+  padding: 20rpx;
+}
+
+.choice .text-wrapper .option {
+  display: inline-block;
+  margin-right: 20px;
+  border-radius: 50%;
+  background: #d1cfd0;
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+}
+.choice .cell {
+  margin-right: 20rpx;
+  padding-top: 20rpx;
+}
+.choice .cell .icon_checked {
+  display: inline-block;
+  vertical-align: middle;
+  font: normal normal normal 14px/1 "weui";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.choice .cell .icon_checked:before {
+  display: block;
+  content: '\EA08';
+  color: #09BB07;
+  font-size: 16px;
+}
+
+.answer-wrapper {
+  margin: 30rpx;
+  padding: 30rpx 0;
+  background: #f0f5f8; 
+}
+
+.answer-wrapper .text {
+  display: inline-block;
+  padding: 10rpx;
+  background: #60bb1e;
+  color: #fff;
+}
+
+.answer-wrapper view {
+  padding: 10rpx 20rpx;
+}
+
+.correct-answer text {
+  color: #60bb1e;
+}
+
+.footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  padding: 20rpx;
+  height: 100rpx;
+  line-height: 60rpx;
+  width: 100%;
+}
+
+.zero-area {
+  flex: 1;
+}
+
+.left-area, .right-area {
+  width: 200rpx;
+  text-align: center;
+}
+
+.gray {
+  color: #999;
+}
+
+.empty-content {
+  margin: auto;
+  text-align: center;
+}

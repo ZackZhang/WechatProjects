@@ -1,0 +1,79 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.0",
+	"appid": "wx6ee1e469ad13380e",
+	"projectname": "miracle_english",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 5,
+			"list": [
+				{
+					"id": -1,
+					"name": "目录页",
+					"pathName": "pages/catalog/catalog",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "付费页 ",
+					"pathName": "pages/pay/pay",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "创意造句分享海报",
+					"pathName": "pages/haibao/haibao",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "答题减免学费海报",
+					"pathName": "pages/haibao2/haibao2",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "跟读测试分享海报",
+					"pathName": "pages/haibao3/haibao3",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "原内文页",
+					"pathName": "pages/content/content"
+				}
+			]
+		}
+	}
+}

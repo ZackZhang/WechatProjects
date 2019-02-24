@@ -1,0 +1,82 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.1.1",
+	"appid": "wx6ee1e469ad13380e",
+	"projectname": "live_%E8%8B%B1%E8%AF%AD%E5%9F%B9%E8%AE%AD",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "speak",
+					"pathName": "pages/speak/speak",
+					"query": "theme_id=1"
+				},
+				{
+					"id": -1,
+					"name": "pk",
+					"pathName": "pages/pk/pk",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "my",
+					"pathName": "pages/my/my",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "share=true&user_id=11"
+				},
+				{
+					"id": -1,
+					"name": "exchange",
+					"pathName": "pages/exchange/exchange",
+					"query": "theme_id=1"
+				},
+				{
+					"id": -1,
+					"name": "article",
+					"pathName": "pages/article/article",
+					"query": "theme_id=1"
+				},
+				{
+					"id": -1,
+					"name": "sign_in",
+					"pathName": "pages/sign_in/sign_in",
+					"query": ""
+				}
+			]
+		}
+	}
+}

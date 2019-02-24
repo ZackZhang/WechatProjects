@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/catalog/catalog",
+    "pages/pay/pay",
+    "pages/haibao/haibao",
+    "pages/haibao2/haibao2",
+    "pages/haibao3/haibao3",
+    "pages/content/content"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "奇迹英语",
+    "navigationBarTextStyle": "black"
+  }
+}

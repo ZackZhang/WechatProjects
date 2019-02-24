@@ -1,0 +1,113 @@
+/* pages/pay/pay.wxss */
+.pay-ban image {
+  width: 750rpx;
+  height: 272rpx;
+}
+
+.pay-item {
+  position: relative;
+  color: #fff;
+}
+
+.pay-item:not(:first-child) {
+  margin-top: 15rpx;
+}
+
+.pay-item:nth-of-type(2) .item-bd,
+.pay-item:nth-of-type(2) .item-side {
+  background: #f9b019;
+  box-shadow: 0 5rpx 13rpx rgba(249, 176, 25, .47), 
+              0 0 18rpx rgba(255, 255, 255, .35),
+              inset 0 0 5rpx rgba(255, 255, 255, .35);
+}
+
+.pay-item:nth-of-type(3) .item-bd,
+.pay-item:nth-of-type(3) .item-side {
+  background: #00d869;
+  box-shadow: 0 5rpx 13rpx rgba(0, 216, 105, .47), 
+              0 0 18rpx rgba(255, 255, 255, .35),
+              inset 0 0 5rpx rgba(255, 255, 255, .35);
+}
+
+.pay-item:nth-of-type(2) .item-gou {
+  color: #f9b019;
+}
+
+.pay-item:nth-of-type(3) .item-gou {
+  color: #00d869;
+}
+
+.pay-list--style-2 .pay-item .item-bd,
+.pay-list--style-2 .pay-item .item-side {
+  background: #00c8d5;
+  box-shadow: 0 5rpx 13rpx rgba(0, 200, 213, .47), 
+              0 0 18rpx rgba(255, 255, 255, .35),
+              inset 0 0 5rpx rgba(255, 255, 255, .35);
+}
+
+.pay-list--style-2 .pay-item:nth-of-type(2) .item-bd,
+.pay-list--style-2 .pay-item:nth-of-type(2) .item-side {
+  background: #078edd;
+  box-shadow: 0 5rpx 13rpx rgba(8, 142, 221, .47), 
+              0 0 18rpx rgba(255, 255, 255, .35),
+              inset 0 0 5rpx rgba(255, 255, 255, .35);
+}
+
+.pay-list--style-2 .pay-item:nth-of-type(3) .item-bd,
+.pay-list--style-2 .pay-item:nth-of-type(3) .item-side {
+  background: #b46ff1;
+  box-shadow: 0 5rpx 13rpx rgba(180, 112, 241, .47), 
+              0 0 18rpx rgba(255, 255, 255, .35),
+              inset 0 0 5rpx rgba(255, 255, 255, .35);
+}
+
+.pay-list--style-2 .pay-item .item-gou {
+  color: #00c8d5;
+}
+
+.pay-list--style-2 .pay-item:nth-of-type(2) .item-gou {
+  color: #078edd;
+}
+
+.pay-list--style-2 .pay-item:nth-of-type(3) .item-gou {
+  color: #b46ff1;
+}
+
+.pay-item .item-bd,
+.pay-item .item-side {
+  padding: 25rpx 10rpx;
+  background: #f66149;
+  border-radius: 10rpx;
+  box-shadow: 0 5rpx 13rpx rgba(246, 97, 72, .47), 
+              0 0 18rpx rgba(255, 255, 255, .35),
+              inset 0 0 5rpx rgba(255, 255, 255, .35);
+}
+
+.pay-item .item-side {
+  width: 100rpx;
+}
+
+.pay-item .item-gou {
+  position: absolute;
+  top: 50%;
+  right: -15rpx;
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  color: #f66149;
+  font-weight: 700;
+  background: #fff;
+  border-radius: 50%;
+  transform: translate(0, -50%);
+}
+
+.pay-tips {
+  position: relative;
+}
+
+.pay-tips .tips-rect {
+  width: 20rpx;
+  height: 20rpx;
+  background: #078edd;
+}

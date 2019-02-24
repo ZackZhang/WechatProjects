@@ -1,0 +1,294 @@
+<!--pages/content/content.wxml-->
+<view class="page">
+  <view class="hb">
+    <view class="hb-tle">
+      <image src="../../images/hbdbz-bg.png"></image>
+    </view>
+
+    <view class="hb-bd plr-20 pb-30">
+      <view class="bd-tle tac">动物童话：45核心词汇/时态语法“一文打尽”</view>
+      <view class="color-white mt-30 tac">读绘本啦！不读会后悔的绘本！</view>
+      <view class="bd-txt plr-60 color-white mt-20 fs-12">
+        <view>
+          我的小主人，要不要读一本绘本哦？这不但是特别有意思的一本动物童话故事，而且，你想都想不到，这本绘本里面埋伏了多么劲爆的彩蛋与惊喜呢！
+        </view>
+        <view>
+          哈哈，记的，这一学期，我们这本绘本你至少要读3遍，每读一遍，你都会有满满的收获哦！
+        </view>
+        <view>
+          而且，小主人，我强烈建议你背诵这篇小童话！！！嗯，此处，3个感叹号！
+        </view>
+      </view>
+
+      <view class="bd-audio bg-white pd-30 mt-30">
+        <view class="audio-tle fs-18 tac">A Lovely Party</view>
+        <view class="audio-txt fs-12 color-gray mt-20">
+          <view>
+            <text class="underline">There are living on a farm many animals.</text> One day the nice lady cow and teacher elephant hold a party. “Today we will teach you how to make cartoons,” they tell the little animals.
+          </view>
+          <view>
+            Each little animal gets an exercise book, a box of <text class="highlight">crayons</text>, a pair of scissors, and a fan!
+          </view>
+        </view>
+        <view class="audio-img tac">
+          <image src="../../images/audio-img.jpg"></image>
+        </view>
+        <view class="audio-txt fs-12 color-gray mt-20">
+          <view>
+            “Please use your crayons to draw two pictures, one picture on one piece of paper, then cut out the pictures, paste them on each side of the fan .”
+          </view>
+        </view>
+        <view class="audio-progress flex-v-c mt-30">
+          <view class="color-primary">{{ current_process }}</view>
+          <view class="flex1">
+            <slider class="slider" 
+              bindchange="hanle_slider_change" 
+              bindtouchstart="handle_slider_move_start" 
+              bindtouchend="handle_slider_move_end" 
+              min="0" 
+              block-size="20" 
+              max="{{slider_max}}" 
+              color="#c2e3ff"
+              activeColor="#42a8ff" 
+              backgroundColor="#c2e3ff" 
+              value="{{slider_value}}"
+            />
+          </view>
+          <view class="color-primary">{{ total_process }}</view>
+          <view class="audio-original">
+            <image class="icon icon-headset mr-10" src="../../images/icon-headset.png"></image>
+            <text class="fs-12 color-white vam">英文原声</text>
+          </view>
+        </view>
+        <view class="audio-control">
+          <image mode="widthFix" src="{{ is_play ? '../../images/icon-play.png' : '../../images/icon-stop.png' }}" class="icon-play" bindtap="audio_play"></image>
+        </view>
+        <view class="audio-controls flex-v-c flex-h-c tac">
+          <image class="icon-back {{ is_first_page ? 'icon-back--disabled' : ''}} mr-50" src="../../images/icon-go.png"></image>
+          <image mode="widthFix" src="{{ is_play ? '../../images/icon-play.png' : '../../images/icon-stop.png' }}" class="icon-play icon-play--sm" bindtap="audio_play"></image>
+          <image class="icon-go ml-50 {{ is_last_page ? 'icon-back--disabled' : ''}}" src="../../images/icon-go.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 模拟造句 -->
+  <view class="hb-mod pt-20 pb-40 plr-20">
+    <view class="mod-tle tac">
+      <image class="icon icon-leaf" src="../../images/icon-leaf.png"></image>
+      <text class="mlr-10 fs-18">模拟造句</text>
+      <image class="icon icon-leaf icon-leaf--flip" src="../../images/icon-leaf.png"></image>
+    </view>
+
+    <view class="plr-40 color-white mt-10">
+      小朋友们，活学活用，让我们模拟上面的句子造几个
+有创意的句子吧！
+    </view>
+
+    <view class="mod-content bg-white mt-30">
+      <view class="zaoju-list">
+        <view class="zaoju-item" wx:for="{{ zaojuList }}" wx:key="index">
+          <view class="flex">
+            <view class="circle-icon mr-30">{{ item.id }}</view>
+            <view class="fs-12 color-gray flex1">
+              <view>{{ item.en }}</view>
+              <view>{{ item.ch }}</view>
+            </view>
+          </view>
+
+          <view class="flex-v-c mt-30">
+            <view class="flex1">
+              <input class="item-input tac" placeholder="输入句子"></input>
+            </view>
+            <view class="item-right ml-10">
+              <image class="icon icon-right-blue" src="../../images/icon-right-blue.png"></image>
+            </view>
+          </view>
+
+          <view class="mt-20 fs-12 color-gray">参考：{{ item.cankao }}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 跟读学习 -->
+  <view class="hb-mod hb-mod--gdxx pt-20 pb-40 plr-20">
+    <view class="mod-tle tac">
+      <image class="icon icon-leaf" src="../../images/icon-leaf.png"></image>
+      <text class="mlr-10 fs-18">跟读学习</text>
+      <image class="icon icon-leaf icon-leaf--flip" src="../../images/icon-leaf.png"></image>
+    </view>
+
+    <view class="plr-40 color-white mt-10">
+      小朋友们，让我们学习一下电影中最好用的3句话
+    </view>
+
+    <view class="mod-content bg-white mt-30 pt-70 plr-25 pb-30">
+      <view class="tac">
+        <view class="circle-icon">2</view>
+      </view>
+      
+      <view class="plr-80 fs-12 mt-20 color-gray">
+        <view>I thought you’d never get the idea</view>
+        <view>我原以为你绝不会有那个念头（进入魔镜）。</view>
+      </view>
+
+      <view class="flex-v-c mt-20">
+        <view class="mr-50">
+          <image class="icon-arrow-double-left" src="../../images/icon-arrow-double-left.png"></image>
+        </view>
+        <view class="sound-wave flex1">
+          <image class="sound" src="../../images/sound.png" hidden="{{ soundPlay }}"></image>
+          <view class="wave-list" hidden="{{ !soundPlay }}">
+            <icon class="wave-item {{ soundPlay ? 'active' : ''}}"></icon>
+            <icon class="wave-item {{ soundPlay ? 'active' : ''}}"></icon>
+            <icon class="wave-item {{ soundPlay ? 'active' : ''}}"></icon>
+            <icon class="wave-item {{ soundPlay ? 'active' : ''}}"></icon>
+            <icon class="wave-item {{ soundPlay ? 'active' : ''}}"></icon>
+            <icon class="wave-item {{ soundPlay ? 'active' : ''}}"></icon>
+            <icon class="wave-item {{ soundPlay ? 'active' : ''}}"></icon>
+            <icon class="wave-item {{ soundPlay ? 'active' : ''}}"></icon>
+            <icon class="wave-item {{ soundPlay ? 'active' : ''}}"></icon>
+            <icon class="wave-item {{ soundPlay ? 'active' : ''}}"></icon>
+          </view>
+        </view>
+        <view class="ml-50">
+          <image class="icon-arrow-double-right" src="../../images/icon-arrow-double-left.png"></image>
+        </view>
+      </view>
+
+      <view class="mt-20 flex">
+        <view class="flex1 tac" style="padding-top: 18rpx;" bindtap="showModal3">
+          <view>
+            <image class="icon-stop icon-stop--xs" src="../../images/icon-stop.png"></image>
+          </view>
+          <view>播放</view>
+        </view>
+        <view class="flex1 tac" bindtap="tapGendu">
+          <view>
+            <image class="icon-reading" src="../../images/icon-reading.png"></image>
+          </view>
+          <view>跟读</view>
+        </view>
+        <view class="flex1 tac" style="padding-top: 14rpx;">
+          <view>
+            <image class="icon icon-star mr-10" src="../../images/icon-star.png"></image>
+            <text class="fs-20 fw-700 vam color-primary">8.8</text>
+          </view>
+          <view>评分</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="tac mt-40">
+      <view class="btn btn-round" style="color: #28548e;">分享</view>
+    </view>
+  </view>
+
+  <!-- 选择题分享 -->
+  <view class="hb-mod hb-mod--no-bg hb-mod--xztfx pt-30 pb-70 plr-20">
+    <view class="mod-tle tac">
+      <text class="mlr-10 fs-18 fw-700">选择题分享</text>
+    </view>
+    <view class="color-white fs-16 mt-15 tac">邀请达人好友答题，减免学费</view>
+    <view class="mod-content pd-40 bg-white mt-30">
+      <view class="fs-12 color-gray">
+        <view>Ok, 我们学习完这段电影视频了！</view>
+        <view>Isn’t it a fanstantic movie? With wild imagination!</view>
+      </view>
+      <view class="fs-18 fw-700 mtb-20" style="color: #28548e;">Let me ask you a question:</view>
+      <view class="fs-12 color-gray">
+        <view>那么，你来猜一下，在最后这句话中，Are you wondering about this?</view>
+        <view class="mt-20">在这句话中，wonder的意思是___________？</view>
+        <view class="mt-20">词性是____________？</view>
+      </view>
+      <view class="answer-list row">
+        <view class="answer-item col-xs-6 {{ answerIndex == index ? 'active' : ''}}" wx:for="{{ answerList }}" wx:key="index" data-index="{{ index }}" bindtap="tapAnswer">
+          <text class="item-id mr-20 vam fw-700">{{ item.id }}</text>
+          <text class="vam">{{ item.text }}</text>
+        </view>
+      </view>
+    </view>
+    <view class="pd-30 color-white">
+      分享给你的好朋友，向他们发起挑战，如果有10个以上好朋友可以答对，你就可以减免月学费的一半哦！
+    </view>
+    <view class="flex mt-20">
+      <view class="btn btn-round flex1" style="color: #28548e;" bindtap="showModal">分享</view>
+      <view class="btn btn-round btn-warning flex1 ml-70">提交</view>
+    </view>
+  </view>
+</view>
+<!-- end .page -->
+
+<!-- 分享弹窗 -->
+<view class="modal-wrap" wx:if="{{ showModal }}">
+  <view class="overlay" wx:if="{{ showModal }}" bindtap="hideModal"></view>
+  <view class="modal" style="width: 550rpx;">
+    <view class="modal-txt lh-md">
+      <view>这么多年，你一直在问自己一句话：</view>
+      <view>为什么我的英语学习效率不高？</view>
+      <view>因为一下英语课，中文扑面而来，把你淹没……</view>
+    </view>
+
+    <view class="share-container mt-80">
+      <view class="user-info tac">
+        <view class="user-avatar">
+          <image src="../../images/user-avatar.jpg"></image>
+        </view>
+        <view class="fs-16 color-white fw-700">奇迹男孩</view>
+      </view>
+
+      <view class="txt-thanks tac">
+        <image src="../../images/txt-thanks.png"></image>
+      </view>
+
+      <view class="txt-zhuanfa tac fs-16 color-white">转发分享，立即<text class="fw-700">免费</text>领取</view>
+
+      <view class="get-list ptb-40 plr-30 mt-40">
+        <view class="fw-700">1/价值99元 奇迹英语每日奇迹课</view>
+        <view class="mt-10">奇迹每一天——高效学习的“英语母语环境”</view>
+        <view class="fw-700 mt-10">2/价值99元 奇迹英语“CQ竞争力课程”</view>
+        <view class="mt-10">CQ竞争力——为孩子面向未来的精英教育</view>
+      </view>
+    </view>
+
+    <view class="tac">
+      <view class="share-btn">
+        <button class="btn-share" hover-class="none">一键分享</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 提示框 -->
+<view class="modal-wrap" wx:if="{{ showModal2 }}">
+  <view class="overlay" wx:if="{{ showModal2 }}"></view>
+  <view class="modal" style="width: 634rpx;">
+    <view class="modal-tips">
+      <view class="tips-tle tac fw-700 color-white">
+        <view><text>您的5天免费课程即将结束</text></view>
+        <view>即将开始<text>99元30天</text>月课程</view>
+      </view>
+
+      <view class="tips-txt color-white mt-50 pt-40 tac lh-md">
+        <view>抢购超值奇迹英语播报课程</view>
+        <view><text class="fw-700">给你一个每天陪伴的高效“英语母语环境”</text></view>
+        <view><text class="fw-700">让你的英语突飞猛进！</text></view>
+        <view>6的起飞！</view>
+      </view>
+    </view>
+
+    <view class="tips-btn mt-60 fw-700 tac">
+      <view>点击进入学习</view>
+      <view>并玩一把<text>“减免学费游戏”</text></view>
+    </view>
+  </view>
+</view>
+
+<!-- 视频弹窗 -->
+<view class="modal-wrap" wx:if="{{ showModal3 }}">
+  <view class="overlay" wx:if="{{ showModal3 }}" bindtap="hideModal3"></view>
+  <view class="modal">
+    <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" controls></video>
+  </view>
+</view>

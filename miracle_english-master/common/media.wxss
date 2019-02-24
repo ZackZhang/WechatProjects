@@ -1,0 +1,42 @@
+.media-item {
+  display: flex;
+  align-items: center;
+}
+
+.media-item__img {
+  width: 90rpx;
+  height: 90rpx;
+  margin-right: 20rpx;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid #eaeaea;
+  box-sizing: border-box;
+}
+
+.media-item__img image {
+  max-width: 90rpx;
+  max-height: 90rpx;
+}
+
+.media-item__bd {
+  flex: 1;
+}
+
+.media-item__bd .bd-tle {
+  font-size: 28rpx;
+}
+
+.media-item__bd .bd-txt {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.media-item--sm .media-item__img {
+  width: 54rpx;
+  height: 54rpx;
+}
+
+.media-item--sm .media-item__img image {
+  max-width: 54rpx;
+  max-height: 54rpx;
+}

@@ -1,0 +1,62 @@
+
+<view class='banner page__bg_white'>
+    <view class='line'></view>
+    <label>{{speak.theme.title}}</label>
+</view>
+<view class='node'>
+    <view class='content'>
+        <xx-blackboard 
+            title="" 
+            content="{{speak.theme.content}}"
+            url="{{speak.theme.voice_url}}"
+        ></xx-blackboard>
+        
+        <view class='pk'>
+            <xx-voice 
+                title="学员"
+                list="{{speak.student_list}}"
+                select="{{selectID}}" 
+                catch:click="playVoice"
+            ></xx-voice>
+            <!-- <view class='rule'></view> -->
+            <xx-voice 
+                title="游客"
+                list="{{speak.visitor_list}}" 
+                select="{{selectID}}" 
+                catch:click="playVoice"
+                direction="row-reverse"
+            ></xx-voice>
+        </view>
+    </view>
+    <view style='height:81px'></view>
+</view>
+
+
+<view  class='footer' wx:if="{{!isLogin}}">
+    上传作业，请先按钮，获取头像    
+    <button size='mini'  type='primary' 
+    open-type='getUserInfo' bindgetuserinfo="getUserInfo">获取头像</button>
+</view>
+
+<block wx:else>
+    <view wx:if="{{!isComplete}}">
+        <xx-record 
+            catch:getTempFile="getRecordFile"
+        ></xx-record> 
+    </view>
+    <view wx:else class='footer'>
+        您已提交作业，如要重新提交，请点击删除 
+        <button size='mini' catchtap='deleteVoice' >删除</button>
+    </view> 
+</block>
+
+  <!-- <view class='menu'>
+        <view class='btn'>上传</view>
+        <view class='btn'>
+            <label wx:if="{{true}}">录音</label>
+            <label wx:else>停止</label>
+        </view>
+        <view class='btn'>试听</view>
+    </view> -->
+
+    

@@ -1,0 +1,44 @@
+/* pages/meet/meet.wxss */
+.banner{
+    display: flex;
+    align-items: center;
+    padding:15px 15px;
+    font-size: 11pt;
+    /* font-weight: bolder; */
+    color: #000;
+    border-bottom: 1rpx solid #dddddd;
+}
+.line{
+    content: "";
+    width: 3px;
+    height: 8pt;
+    background:  #1c82d4;
+    margin-right:5px;
+    /* border-left: 2px solid #1c82d4; */
+}
+
+.node{    padding: 15px;}
+.content{
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow:0px 3px 3px #dddddd;
+}
+.pk{
+    display: flex;
+    justify-content: space-between;
+}
+.pk xx-voice {
+    flex:1;
+}
+.rule{
+    
+    border-left: 1rpx #888 solid;
+    border-right: 1rpx #888 solid;
+}
+.join{
+    text-align: center;
+    padding: 10px 0;
+    color: green;
+    font-size: 11pt;
+}

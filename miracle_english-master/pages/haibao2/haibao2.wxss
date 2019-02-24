@@ -1,0 +1,23 @@
+/* pages/haibao2/haibao2.wxss */
+@import "../haibao/haibao";
+
+page {
+  background: #078edd;
+}
+
+.option-icon {
+  display: inline-block;
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  background: #078edd;
+  font-size: 24rpx;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.option-item {
+  margin-top: 30rpx;
+}

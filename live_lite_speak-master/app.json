@@ -1,0 +1,48 @@
+{
+    "pages":[
+        "pages/roster/roster",
+        "pages/index/index",
+        "pages/sign_in/sign_in",
+        "pages/address/address",
+        "pages/exchange/exchange",
+        "pages/article/article",
+        "pages/pk/pk",
+        "pages/speak/speak",
+        "pages/more/more",
+        "pages/my/my",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#1c82d4",
+        "backgroundTextStyle": "light",
+        "navigationBarTitleText": "畅畅课堂",
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh": false
+    },
+    "tabBar": {
+        "backgroundColor": "#fff",
+        "color": "#b3b3b3",
+        "selectedColor": "#212121",
+        "borderStyle": "white",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "课程",
+                "iconPath": "images/info_unselect.png",
+                "selectedIconPath": "images/info_select.png"
+            },
+            {
+                "pagePath": "pages/pk/pk",
+                "text": "作业",
+                "iconPath": "images/match_unselect1.png",
+                "selectedIconPath": "images/match_select1.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "奖品",
+                "iconPath": "images/my_unselect.png",
+                "selectedIconPath": "images/my_select.png"
+            }
+        ]
+    }
+}

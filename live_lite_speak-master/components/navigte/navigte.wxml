@@ -1,0 +1,11 @@
+
+<navigator url="{{url}}" method="{{method}}" class="xx_node "   >
+    <slot name="icon"  ></slot>
+    <view class="title">
+        <slot name="left"></slot>
+    </view>
+    <view class="content">
+        <slot name="right"></slot>
+    </view> 
+     <view class="arrow" hidden='{{isarrow == "false"}}'></view> 
+</navigator>

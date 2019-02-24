@@ -1,0 +1,17 @@
+<view class='video-list-container'>
+  <view class='search-wrapper'>
+    <search class="search"></search>
+  </view>
+  <view class='classify'>
+    <view class='text'>{{classifyName}}</view>
+    <view class='py'>{{classifyPinyin}}</view>
+  </view>
+
+  <view class='video-list'>
+    <view class='station-wrapper-two' wx:for='{{videoIntros}}' wx:key='{{index}}'>
+      <videoIntro videoIntro='{{item}}'></videoIntro>
+    </view> 
+  </view>
+
+  <loadingTip canLoadMore='{{canLoadMore}}'></loadingTip>
+</view>

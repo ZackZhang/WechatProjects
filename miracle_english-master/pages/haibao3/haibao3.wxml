@@ -1,0 +1,46 @@
+<!--pages/haibao3/haibao3.wxml-->
+<view class="page">
+  <view class="haibao-ban">
+    <image src="../../images/gdcs-ban.jpg"></image>
+    <view class="user-info tac pt-20">
+      <view class="user-avatar"><image src="../../images/user-avatar.jpg"></image></view>
+      <view class="fs-16 color-white">奇迹男孩</view>
+    </view>
+  </view>
+
+  <view class="haibao-container bg-white mlr-5">
+    <view class="fs-16 tac">奇迹英语<text class="ml-30">漂亮发音</text></view>
+    
+    <view class="haibao-tle tac mt-30">
+      <image src="../../images/txt-wzqjyyfycs.png"></image>
+    </view>
+
+    <view class="haibao-tle-sub tac mt-15 plr-50">
+      <text class="fw-700 color-white">谁来挑战，为我减学费!</text>
+    </view>
+
+    <view class="score color-white">
+      <text class="score-num fw-700">89</text>
+      <text>分</text>
+    </view>
+
+    <view class="haibao-juzi haibao-juzi--no-rect mt-40">
+      <view class="juzi-bd plr-50">
+        <view>I thought you’d never get the idea！</view>
+        <view>我原以为你绝不会有那个念头！</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="ptb-15 plr-30 flex-v-c">
+    <view class="color-white pl-20 flex1">
+      <view>奇迹英语，要制造什么样的奇迹？</view>
+      <view>识别小程序码，一探究竟！</view>
+    </view>
+    <view class="haibao-code">
+      <image src="../../images/code.png"></image>
+    </view>
+  </view>
+</view>
+
+

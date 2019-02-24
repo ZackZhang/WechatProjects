@@ -1,0 +1,85 @@
+.header {
+  padding: 20rpx 0;
+  text-align: center;
+  border-bottom: 2rpx solid #ccc;
+}
+
+.panel-container {
+  padding: 0 20rpx 0 30rpx;
+}
+
+.bg-title-wrapper, .title-wrapper {
+  position: relative;
+  margin-left: 16px;
+  padding: 16px 8px 32px 32px;
+  border-top: 2rpx solid #ccc;
+  border-left: 2rpx solid #ccc;
+}
+
+.title-wrapper {
+  padding-left: 46px;
+}
+
+.bg-title-wrapper {
+  padding-bottom: 16px;
+}
+
+.panel-container .bg-title-wrapper:first-child {
+  border-top: none;
+}
+
+.bg-title {
+  color: #000;
+}
+
+.bg-title-wrapper .text {
+  position: absolute;
+  right: 20rpx;
+  top: 26rpx;
+  padding: 10rpx 20rpx;
+  color: #fff;
+  background: #f65527;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+}
+
+.bg-circle {
+  position: absolute;
+  top: 32rpx;
+  left: -32rpx;
+  width: 64rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  text-align: center;
+  border: 2rpx solid #ccc;
+  border-radius: 50%;
+  background: #5ebc1d;
+  color: #fff;
+}
+
+.circle {
+  position: absolute;
+  top: 50rpx;
+  left: -10rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.title-wrapper .icon {
+  width: 24px;
+  height: 24px;
+  right: 0;
+  float: right;
+}
+
+.title-wrapper .title {
+  color: #666;
+  float: left;
+}
+
+.panel-container .title-wrapper:last-child {
+  border-bottom: 2rpx solid #ccc;
+}

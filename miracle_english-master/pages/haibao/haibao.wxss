@@ -1,0 +1,73 @@
+/* pages/haibao/haibao.wxss */
+page {
+  background: #ff7206;
+}
+
+.haibao-ban,
+.haibao-ban image {
+  width: 750rpx;
+  height: 268rpx;
+}
+
+.haibao-ban {
+  position: relative;
+}
+
+.haibao-container {
+  padding: 50rpx 60rpx 130rpx;
+}
+
+.haibao-tle image {
+  width: 623rpx;
+  height: 104rpx;
+}
+
+.haibao-tle-sub text {
+  display: block;
+  width: 100%;
+  padding: 10rpx 0;
+  font-size: 40rpx;
+  background: #f7af32;
+  border-radius: 50rpx;
+  text-shadow: 3rpx 3rpx 0 rgba(0, 0, 0, .6);
+}
+
+.haibao-txt {
+  color: #ff7206;
+}
+
+.haibao-juzi .juzi-bd {
+  position: relative;
+  padding-left: 40rpx;
+  line-height: 1.5;
+}
+
+.haibao-juzi .juzi-bd:before {
+  position: absolute;
+  top: 12rpx;
+  left: 0;
+  display: block;
+  width: 20rpx;
+  height: 20rpx;
+  background: #ff7206;
+  content: "";
+}
+
+.haibao-juzi--no-rect .juzi-bd:before {
+  content: none;
+}
+
+.haibao-code image {
+  width: 188rpx;
+  height: 205rpx;
+}
+
+.haibao-code-txt {
+  width: 30rpx;
+  line-height: 30rpx;
+  font-size: 20rpx;
+}
+
+.haibao-code-txt text {
+  color: #ff0000;
+}

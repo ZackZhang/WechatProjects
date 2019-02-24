@@ -1,0 +1,20 @@
+.video-list-container {
+  padding-top: 100rpx; 
+}
+
+.classify {
+  height: 200rpx;
+  background: -webkit-linear-gradient(top, rgba(135,194,66, 1),  rgba(138,204,175, 1));
+  color: #fff;
+  text-align: center;
+  border: 2rpx solid transparent;
+  font-size: 42rpx;
+}
+
+.classify .text {
+  margin-top: 30rpx;
+}
+
+.video-list {
+  margin-top: 20rpx;
+}

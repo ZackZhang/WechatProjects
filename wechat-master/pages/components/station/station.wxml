@@ -1,0 +1,8 @@
+<view class='station' bindtap='stationHandle'>
+  <view class='img-wrapper'>
+    <image src='{{station.imgUrl}}'></image>
+  </view>
+  <view class='text'>
+    {{station.label}}
+  </view>
+</view>

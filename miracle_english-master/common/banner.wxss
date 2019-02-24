@@ -1,0 +1,5 @@
+.banner,
+.banner-item {
+  width: 750rpx;
+  height: 508rpx;
+}

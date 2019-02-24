@@ -1,0 +1,36 @@
+/* pages/haibao3/haibao3.wxss */
+@import "../haibao/haibao";
+
+page {
+  background: #ffe400;
+}
+
+.haibao-container {
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+
+.haibao-tle image {
+  width: 672rpx;
+  height: 80rpx;
+}
+
+.score {
+  width: 218rpx;
+  height: 218rpx;
+  line-height: 218rpx;
+  text-align: center;
+  margin: 30rpx auto 0;
+  background: #078edd;
+  border-radius: 50%;
+  box-shadow: 6rpx 6rpx 3rpx rgba(0, 0, 0, .4);
+  text-shadow: 6rpx 6rpx 3rpx rgba(0, 0, 0, .32);
+}
+
+.score-num {
+  font-size: 104rpx;
+}
+
+.score-txt {
+  font-size: 32rpx;
+}

@@ -1,0 +1,13 @@
+<view class='unit-container'>
+  <view class="weui-panel__bd" wx:for='{{classifies}}' wx:key='{{item}}'>
+    <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" data-id="{{item.id}}" bindtap='toTest'>
+      <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+        <image class="weui-media-box__thumb" src="https://www.yanda123.com/app/test-paper.png" />
+      </view>
+      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+        <view class="weui-media-box__desc">{{item.label}}</view>
+      </view>
+      <view class='custom-button'>开始测试</view>
+    </view>
+  </view>
+</view>

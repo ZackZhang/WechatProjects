@@ -1,0 +1,69 @@
+.tab-tle {
+  padding: 20rpx;
+  font-size: 0;
+  text-align: center;
+}
+
+.tab-tle .tab-tle-item {
+  position: relative;
+  display: inline-block;
+  height: 72rpx;
+  line-height: 72rpx;
+  padding: 0 58rpx;
+  font-size: 28rpx;
+  color: #849391;
+  border: 1rpx solid #93f548;
+  border-radius: 6rpx;
+}
+
+.tab-tle .tab-tle-item.active {
+  background: #93f548;
+  color: #333;
+}
+
+.tab-tle .tab-tle-item:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.tab-tle .tab-tle-item + .tab-tle-item {
+  margin-left: -1rpx;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.tab-tle--style-2 {
+  padding: 0;
+  display: flex;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.tab-tle--style-2 .tab-tle-item {
+  flex: 1;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-radius: 0;
+  border: 0;
+  color: #666;
+}
+
+.tab-tle--style-2 .tab-tle-item text {
+  position: relative;
+  display: inline-block;
+}
+
+.tab-tle--style-2 .tab-tle-item.active {
+  background: none;
+  color: #000;
+}
+
+.tab-tle--style-2 .tab-tle-item.active text:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #000;
+  content: "";
+}

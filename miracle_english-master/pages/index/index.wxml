@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="pd-40">
+    <view class="login-container bg-white pt-30 pd-40">
+      <view class="color-warning">奇迹英语，陪伴每一天，营造英语母语环境，高效学习！</view>
+
+      <view class="mt-10">
+        <view class="fs-16 color-primary">您的昵称</view>
+        <view class="mt-15">
+          <input class="nick-input"></input>
+        </view>
+      </view>
+
+      <view class="mt-30">
+        <view class="fs-16 color-primary">选择级别，进入奇迹每天一堂课（必选）</view>
+
+        <view class="level-list">
+          <view class="level-item color-white" wx:for="{{ levelList }}" wx:key="index" data-index="{{ index }}" bindtap="tapLevel">
+            <text class="fw-700 fs-18">{{ item.level }}</text>
+            <text class="fs-16 ml-70">{{ item.total }}</text>
+            <view class="level-item--active" wx:if="{{ levelCurrent == index }}">
+              <image class="icon icon-right" src="../../images/icon-right.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="mt-30">
+        <view class="fs-16 color-primary">请输入您的信息（选填）</view>
+        <view class="color-gray-light">我们将向您推荐您的专属学习方案</view>
+
+        <view class="infor-input mt-25">
+          <input placeholder="年龄"></input>
+        </view>
+
+        <view class="infor-input mt-25">
+          <input placeholder="年级"></input>
+        </view>
+      </view>
+
+      <view class="mt-40">
+        <view class="fs-16 color-primary">教材版本</view>
+        <view class="banben-list mt-30">
+          <view class="banben-item mb-30" wx:for="{{ banbenList }}" wx:key="index" data-index="{{ index }}" bindtap="tapBanben">
+            {{ item.name }}
+            <view class='icon-checkbox icon-checkbox--active ml-15' wx:if="{{ banbenCurrent == index }}">
+              <image class="icon-right-white" src="../../images/icon-right-white.png"></image>
+            </view>
+            <view class="icon-checkbox ml-15" wx:else></view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="tac ptb-30">
+      <button class="btn btn-warning btn-round">提交</button>
+    </view>
+  </view>
+</view>

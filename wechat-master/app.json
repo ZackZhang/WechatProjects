@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/zone/zone",
+    "pages/user/user",
+    "pages/video/video",
+    "pages/videoList/videoList",
+    "pages/setting/mySetting/mySetting",
+    "pages/setting/account/account",
+    "pages/setting/aboutUs/aboutUs",
+    "pages/setting/userMsg/userMsg",
+    "pages/setting/mobile/mobile",
+    "pages/hotSearch/hotSearch",
+    "pages/user/collect/collect",
+    "pages/user/history/history",
+    "pages/user/login/login",
+    "pages/user/vip/vip",
+    "pages/user/vip/bind/bind",
+    "pages/user/vip/buy/buy",
+    "pages/msg/msg_fail",
+    "pages/msg/msg_success",
+    "pages/user/payrecord/payrecord",
+    "pages/paper/paper",
+    "pages/exam/list/list",
+    "pages/exam/catalog/catalog",
+    "pages/exam/chapter/chapter",
+    "pages/exam/chapterexam/chapterexam",
+    "pages/exam/unit/unit",
+    "pages/exam/test/test"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "燕达教育",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#fc9c14",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "resources/images/home.png",
+        "selectedIconPath": "resources/images/home_select.png"
+      },
+      {
+        "pagePath": "pages/zone/zone",
+        "text": "分类",
+        "iconPath": "resources/images/fenlei.png",
+        "selectedIconPath": "resources/images/fenlei_select.png"
+      },
+      {
+        "pagePath": "pages/exam/list/list",
+        "text": "在线考试",
+        "iconPath": "resources/images/kaoshi.png",
+        "selectedIconPath": "resources/images/kaoshi_select.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "resources/images/my.png",
+        "selectedIconPath": "resources/images/my_select.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

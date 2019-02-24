@@ -1,0 +1,3 @@
+.page--has-footer {
+  padding-bottom: 60px;
+}

@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "search": "../components/search/search",
+    "station": "../components/station/station",
+    "loadingTip": "../components/loadingTip/loadingTip",
+    "videoIntro": "../components/videoIntro/videoIntro"
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "backgroundTextStyle": "dark"
+}

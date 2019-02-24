@@ -1,0 +1,65 @@
+<view class='buy-container'>
+  <!-- 用户信息 -->
+  <view class='user-info-container'>
+    <view class='bg-image'>
+      <image src='https://www.yanda123.com/app/buyheader.png'></image>
+    </view>
+    <!-- 头像 -->
+    <view class='avatar-wrapper'>
+      <image class="avatar" src="{{userInfo.avatar ?  userInfo.avatar: '/resources/images/my.png'}}" background-size="cover"></image>
+    </view>
+    <!-- 昵称 和 vip -->
+    <view class='user-msg-wrapper'>
+      <view class='nick-name'>{{userInfo.nickName}}</view> 
+      <view class="vip-block {{isVip ? 'vip' : 'no-vip'}}">VIP</view>
+      <view wx:if='{{!isForever}}' class='expire'>剩{{expireDay}}天到期</view>
+      <view wx:if='{{isForever}}' class='expire'>永久会员</view>
+    </view>
+  </view>
+
+  <!-- 燕达广告图 -->
+  <view class='ad-wrapper'>
+    <image src='https://www.yanda123.com/app/banner.png'></image>
+  </view>
+
+  <view class='intro-wrapper'>
+    <text class='weight-text'>VIP会员</text>
+    <text class='text'>可无限制观看所有视频</text>
+  </view>
+
+  <view class='choose-container'>
+    <view class='choose-wrapper' wx:for='{{chooseOptions}}' wx:key='{{index}}' data-choosed='{{item.id}}' bindtap='changeChoose'>
+      <view class="choose {{hasChoosed === item.id ? 'has-choosed' : ''}}">
+        <view class='time'>{{item.label}}</view>
+        <view class='current-price'>
+          <text class='symbol'>￥</text>
+          <text class='number'>{{item.currentPrice}}</text>
+        </view>
+        <view class='old-price'>￥{{item.oldPrice}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='line'></view>
+  <!-- 支付方式选择 -->
+  <view class='pay-way-wrapper'>
+    <view class='pay-way' wx:for='{{payOptions}}' wx:key='{{index}}' data-pay='{{index}}' bindtap='changePayWay'>
+      <view class='avatar-wrapper'>
+        <image class="avatar" src="{{item.avatar}}" background-size="cover"></image>
+      </view>
+      <view class='text'>{{item.text}}</view>
+      <view class='circle'>
+        <view class='inside-circle' wx:if='{{payWay === index}}'></view>
+      </view>
+    </view>
+  </view>
+
+  <view class='confirm'>
+    <view class='intro'>
+      <text class='weight-text'>总计:</text>
+      <text class='price'>￥{{chooseProduct.currentPrice}}</text>
+      <text class='sale'>已优惠{{chooseProduct.sale}}元</text>
+    </view>
+    <view class='go' bindtap='paySubmit' hover-class='pay-active'>确认支付</view>
+  </view>
+</view>

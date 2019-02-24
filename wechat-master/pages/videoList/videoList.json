@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "search": "../components/search/search",
+    "loadingTip": "../components/loadingTip/loadingTip",
+    "videoIntro": "../components/videoIntro/videoIntro"
+  }
+}

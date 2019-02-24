@@ -1,0 +1,53 @@
+<!--pages/haibao/haibao.wxml-->
+<view class="page">
+  <view class="haibao-ban">
+    <image src="../../images/cyzj-ban.jpg"></image>
+    <view class="user-info tac pt-20">
+      <view class="user-avatar"><image src="../../images/user-avatar.jpg"></image></view>
+      <view class="fs-16 color-white">奇迹男孩</view>
+    </view>
+  </view>
+
+  <view class="haibao-container bg-white mlr-5">
+    <view class="fs-16 tac">奇迹英语<text class="ml-30">创意模拟造句</text></view>
+    
+    <view class="haibao-tle tac mt-30">
+      <image src="../../images/txt-yydrtzs.png"></image>
+    </view>
+
+    <view class="haibao-tle-sub tac mt-30 plr-50">
+      <text class="fw-700 color-white">10个好友助力，学费减半</text>
+    </view>
+
+    <view class="haibao-txt tac mt-20">
+      看，我造的句子！你能更有创意吗？
+    </view>
+
+    <view class="haibao-juzi mt-60 plr-50">
+      <view class="juzi-bd">
+        <view>原句：Did you do like you should？</view>
+        <view class="mt-10">你做了你应该做的吗？</view>  
+      </view>    
+    </view>
+
+    <view class="haibao-juzi mt-20 plr-50">
+      <view class="juzi-bd fw-700 color-warning">
+        <view>我的创意造句：</view>
+        <view class="mt-10">Do you eat like you should？</view>
+        <view class="mt-10">你有好好吃饭吗？</view>
+      </view>    
+    </view>
+  </view>
+
+  <view class="ptb-15 plr-20 flex-v-c">
+    <view class="color-white flex1">
+      <view>奇迹英语，要制造什么样的奇迹？</view>
+      <view>识别小程序码，一探究竟！</view>
+    </view>
+    <view class="haibao-code">
+      <image src="../../images/code.png"></image>
+    </view>
+    <view class="haibao-code-txt color-white ml-20">免费抢购<text class="fw-700">99</text>元英语课</view>
+    <view class="haibao-code-txt color-white">长按识别 进入小程序</view>
+  </view>
+</view>
